@@ -1,3 +1,5 @@
-# Repository for class project
+# Buil Steps
 
-This readme is a placeholder that should be replaced
+`npm run build` to build the project
+
+`npm start` launches a server, using serve. Navigate to localhost:3000.
