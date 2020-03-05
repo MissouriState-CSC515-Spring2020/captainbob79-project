@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head lang='en'>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Black Panther Details</title>
+</head>
+
+<body>
+
+    <div class="card" style="float: left;max-width: 18rem;width: 20%; min-width: 10rem;">
+        <div class="card-body">
+            <h5 class="card-title">Categories</h5>
+            <div class="card-text">
+                <ul>
+                    <li><a href="/">All</a></li>
+                    <li><a href="/action">Action</a></li>
+                    <li><a href="/horror">Horror</a></li>
+                    <li><a href="/drama">Drama</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron" style="float: right; width: 75%;">
+        <img class="card-img-top" src="{{ film.poster }}" alt="{{ film.title }}" style="height: 360px; width: 240px;">
+        <h1 class="display-4">{{ film.title }}</h1>
+        <div class="lead">Black Panther elevates superhero cinema to thrilling new heights while telling one of the MCU's most absorbing stories -- and introducing some of its most fully realized characters.</div>
+        <hr class="my-4">
+        <div>"Black Panther" follows T'Challa who, after the events of "Captain America: Civil War," returns home to the isolated, technologically advanced African nation of Wakanda to take his place as King. However, when an old enemy reappears on the radar, T'Challa's mettle as King and Black Panther is tested when he is drawn into a conflict that puts the entire fate of Wakanda and the world at risk.</div>
+    </div>
+
+</body>
+</html>

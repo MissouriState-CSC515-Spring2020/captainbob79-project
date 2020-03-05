@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Film } from '../models/film'
+import { FilmService } from '../service/film.service';
 
 @Component({
   selector: 'app-main-screen',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainScreenComponent implements OnInit {
 
+  filmService: FilmService = new FilmService();
+  films: Film[] = this.filmService.getFilms();
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
 }
