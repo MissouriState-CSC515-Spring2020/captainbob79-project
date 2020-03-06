@@ -1,7 +1,7 @@
 # Captainbob79Project
-## Chet Ridgway
-## CSC 515
-## Checkpoint 4
+Chet Ridgway
+CSC 515
+Checkpoint 4
 
 ## Build
 
