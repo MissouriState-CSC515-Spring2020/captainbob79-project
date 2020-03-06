@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../models/film';
 import { FilmService } from '../service/film.service';
+import { ParamMap, Router, ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-detail-screen-component',
@@ -10,12 +12,16 @@ import { FilmService } from '../service/film.service';
 export class DetailScreenComponentComponent implements OnInit {
 
   film: Film;
-  filmService: FilmService = new FilmService();
+  title: String;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private filmService: FilmService
+  ) {}
 
   ngOnInit() {
-    this.film = this.filmService.getFilm("Black Panther");
+    this.film = this.filmService.getFilm(this.route.snapshot.paramMap.get('id'));
   }
 
 }

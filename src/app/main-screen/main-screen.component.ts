@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Film } from '../models/film'
 import { FilmService } from '../service/film.service';
 
@@ -10,10 +10,20 @@ import { FilmService } from '../service/film.service';
 export class MainScreenComponent implements OnInit {
 
   filmService: FilmService = new FilmService();
-  films: Film[] = this.filmService.getFilms();
+  @Input() genre: String; 
+  films: Film[];
+ 
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {  }
+  ngOnInit() {
+    if (this.genre === undefined) {
+      this.films = this.filmService.getFilms();
+    }
+    else {
+      console.log(this.genre);
+      this.films = this.filmService.getGenre(this.genre);
+      console.log(this.films);
+    }
+  }
 
 }

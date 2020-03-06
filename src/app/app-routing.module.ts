@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { DetailScreenComponentComponent } from './detail-screen-component/detail-screen-component.component';
-import { ActionScreenComponent } from './action-screen/action-screen.component';
-import { DramaScreenComponent } from './drama-screen/drama-screen.component';
-import { HorrorScreenComponent } from './horror-screen/horror-screen.component';
+import { ActionScreenComponent } from './genre-components/action-screen/action-screen.component';
+import { DramaScreenComponent } from './genre-components/drama-screen/drama-screen.component';
+import { HorrorScreenComponent } from './genre-components/horror-screen/horror-screen.component';
 
 
 const routes: Routes = [
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: "horror", 
     component: HorrorScreenComponent
   },
-  { path: "details", 
+  { path: "details/:id", 
     component: DetailScreenComponentComponent
   }
 ];

@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html>
 <head lang='en'>
@@ -27,11 +29,11 @@
 
 		<div class="col" *ngFor="let film of films">
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="{{film.poster}}"alt="{{film.title}}">
+				<img class="card-img-top" src="{{ film.poster }}"alt="{{ film.title }}">
 				<div class="card-body">
 				  <h5 class="card-title">{{film.title}}</h5>
-				  <p class="card-text"><a href="/action">{{film.genre}}</a></p>
-				  <a href="/details" class="btn btn-primary">Details</a>
+				  <p class="card-text"><a href="/{{ film.genre.toLowerCase() }}">{{ film.genre }}</a></p>
+				  <a href="/details/{{ film.title }}" class="btn btn-primary">Details</a>
 				</div>
 			  </div>
 		</div>

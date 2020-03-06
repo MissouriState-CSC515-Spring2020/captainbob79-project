@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { DetailScreenComponentComponent } from './detail-screen-component/detail-screen-component.component';
-import { ActionScreenComponent } from './action-screen/action-screen.component';
-import { DramaScreenComponent } from './drama-screen/drama-screen.component';
-import { HorrorScreenComponent } from './horror-screen/horror-screen.component';
+import { ActionScreenComponent } from './genre-components/action-screen/action-screen.component';
+import { DramaScreenComponent } from './genre-components/drama-screen/drama-screen.component';
+import { HorrorScreenComponent } from './genre-components/horror-screen/horror-screen.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HorrorScreenComponent } from './horror-screen/horror-screen.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
