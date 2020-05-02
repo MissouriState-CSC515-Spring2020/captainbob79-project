@@ -13,21 +13,13 @@ const routes: Routes = [
     redirectTo: "/home",
     pathMatch: "full",
   },
-  { path: "home", 
-    component: MainScreenComponent
-  },
-  { path: "action", 
-    component: ActionScreenComponent
-  },
-  { path: "drama", 
-    component: DramaScreenComponent
-  },
-  { path: "horror", 
-    component: HorrorScreenComponent
-  },
   { path: "details/:id", 
     component: DetailScreenComponentComponent
-  }
+  },
+  { path: 'action', loadChildren: () => import('./action/action.module').then(m => m.ActionModule) },
+  { path: 'horror', loadChildren: () => import('./horror/horror.module').then(m => m.HorrorModule) },
+  { path: 'drama', loadChildren: () => import('./drama/drama.module').then(m => m.DramaModule) },
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }
 ];
 
 @NgModule({

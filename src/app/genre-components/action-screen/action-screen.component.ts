@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainScreenComponent } from '../../main-screen/main-screen.component'
 
 @Component({
   selector: 'app-action-screen',

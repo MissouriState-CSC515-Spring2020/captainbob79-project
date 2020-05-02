@@ -10,20 +10,23 @@ import { DramaScreenComponent } from './genre-components/drama-screen/drama-scre
 import { HorrorScreenComponent } from './genre-components/horror-screen/horror-screen.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ActionModule } from './action/action.module';
+import { SharedModuleModule } from './shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainScreenComponent,
-    DetailScreenComponentComponent,
-    ActionScreenComponent,
-    DramaScreenComponent,
-    HorrorScreenComponent
+    //MainScreenComponent,
+    //DetailScreenComponentComponent,
+    //ActionScreenComponent,
+    //DramaScreenComponent,
+    //HorrorScreenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    SharedModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
